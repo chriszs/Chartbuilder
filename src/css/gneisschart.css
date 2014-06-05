@@ -1,5 +1,3 @@
-@import url('./GothamSSm.css');
-
 svg #ground {
 	fill: #fff;
 	stroke: none;
@@ -44,30 +42,30 @@ svg #yAxis .zero .tick {
 svg #baseline text,
 svg .axis text,
 svg .bar text {
-	font-family: 'HelveticaNeueW01-57Cn','Gotham SSm',Helvetica, sans-serif;
+	font-family: "Tablet Gothic Narrow", "tablet-gothic-narrow","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 15px;
 	fill: #333;
 }
 
 svg .legendItem text {
-	font-family: 'HelveticaNeueW01-57Cn','Gotham SSm',Helvetica, sans-serif;
+	font-family: "Tablet Gothic Narrow", "tablet-gothic-narrow","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size:  15px;
 }
 
 svg text.metaText {
-	font-family: 'HelveticaNeueW01-57Cn','Gotham SSm',Helvetica, sans-serif;
+	font-family: "Tablet Gothic Narrow", "tablet-gothic-narrow","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size:  15px;
 	text-rendering:   optimizeLegibility;
 }
 
 svg text.barLabel, 
 svg text.bargridLabel {
-	font-family: 'HelveticaNeueW01-57Cn','Gotham SSm',Helvetica, sans-serif;
+	font-family: "Tablet Gothic Narrow", "tablet-gothic-narrow","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 15px
 }
 
 svg #titleLine {
-  font-family: 'HelveticaNeueW01-77BdCn 692722','Gotham SSm',Helvetica, sans-serif;
+  font-family: "Tablet Gothic Narrow", "tablet-gothic-narrow","Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 17px;
   fill: #333;
