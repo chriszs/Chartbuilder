@@ -661,7 +661,7 @@ var Gneiss = {
                 .attr('class', 'seriesColumn')
                 .attr('fill', function(d,i) { return d.color })
                 .attr('transform', function(d,i) {
-                    return 'translate(' + (i * columnGroupShift - (columnGroupShift * (g.series.length - 1) / 2)) + ',1)' 
+                    return 'translate(' + Math.round(i * columnGroupShift - (columnGroupShift * (g.series.length - 1) / 2)) + ',1)' 
                 })
             
         columnGroups.exit().remove()
@@ -671,18 +671,18 @@ var Gneiss = {
         
         columnRects.enter()
             .append('rect')
-                .attr('width', columnWidth)
+                .attr('width', Math.round(columnWidth-1))
                 .attr('height', function(d,i) {
-                    return Math.abs(g.yAxis.scale(d) - g.yAxis.scale(Gneiss.rectBase(d, domain))) 
+                    return Math.round(Math.abs(g.yAxis.scale(d) - g.yAxis.scale(Gneiss.rectBase(d, domain))))
                 })
                 .attr('x', function(d,i) {
-                    return g.xAxis.scale(Gneiss.g.xAxisRef[i]) - (columnWidth / 2)
+                    return Math.round(g.xAxis.scale(Gneiss.g.xAxisRef[i]) - (columnWidth / 2))
                 })
                 .attr('y', function(d,i) {
                     if (g.yAxis.scale(d) - g.yAxis.scale(Gneiss.rectBase(d, domain)) >= 0) {
-                        return g.yAxis.scale(Gneiss.rectBase(d, domain)) - 1;
+                        return Math.round(g.yAxis.scale(Gneiss.rectBase(d, domain)) - 1);
                     } else {
-                        return g.yAxis.scale(d) - 1;
+                        return Math.round(g.yAxis.scale(d) - 1);
                     }
                 })
     
